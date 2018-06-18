@@ -4,17 +4,24 @@
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
 
+    <!--Load font: roboto condensed 300 700 + italicized-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,700,700i" rel="stylesheet">
+  
     <!-- External CSS -->
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css"/>
+    
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
+    
+     
   </head>
 
   <body>
@@ -27,6 +34,16 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
+      <p>
+          <section class="new-tweet">
+              <h2>Compose Tweet</h2>
+              <form  method="/tweets" action=POST>
+                <textarea class="chatbox" name="text" placeholder="What are you humming about?"></textarea>
+                <input class="Tweetbutton" type="submit" value="Tweet">
+                <span class="counter">140</span>
+              </form>
+            </section>
+      </p>
     </main>
 
   </body>

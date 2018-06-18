@@ -1,0 +1,18 @@
+#nav-bar{
+    position: fixed;
+    background-color: #00a087 ;
+    left: 0;
+    right: 0;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+#nav-bar .header{
+    position: absolute;
+    color: #e8fdff ;
+    font-size: 200%;
+    
+    line-height: 80px;
+    margin: 0 0 0 .5em;    
+
+}
