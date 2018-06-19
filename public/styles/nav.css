@@ -5,14 +5,13 @@
     right: 0;
     margin-left: 2em;
     margin-right: 2em;
+    z-index: 2;
 }
 
 #nav-bar .header{
     position: absolute;
     color: #e8fdff ;
     font-size: 200%;
-    
     line-height: 80px;
     margin: 0 0 0 .5em;    
-
 }

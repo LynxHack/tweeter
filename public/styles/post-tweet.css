@@ -1,0 +1,42 @@
+.post-tweet{
+    background-color:#EDEDEE;
+    border-radius: 5px;
+    border: 1px solid #c4bebe;
+    margin: 0 2em 0;
+}
+
+.post-tweet img{
+    float: left;
+    block-size: 60px;
+}
+
+.post-tweet h2{
+    text-align: left;
+    left:10px;
+    top: -10px;
+    position: relative;
+}
+
+.post-tweet .post-content{
+    position: relative;
+    background-color:white;
+    bottom: 0px;   
+}
+
+.post-tweet .post-content .content{
+    position: relative;
+    bottom: 0px;
+}
+
+.post-tweet .post-content .daycount{
+    position: relative;
+    bottom: 0px;
+}
+
+.post-tweet .aturl{
+    position: relative;
+    top: -55px;
+    right: -145px;
+} 
+
+
