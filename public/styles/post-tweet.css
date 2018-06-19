@@ -8,6 +8,7 @@
 .post-tweet img{
     float: left;
     block-size: 60px;
+    border-top-left-radius: 5px;
 }
 
 .post-tweet h2{
@@ -18,19 +19,9 @@
 }
 
 .post-tweet .post-content{
-    position: relative;
-    background-color:white;
-    bottom: 0px;   
-}
-
-.post-tweet .post-content .content{
-    position: relative;
-    bottom: 0px;
-}
-
-.post-tweet .post-content .daycount{
-    position: relative;
-    bottom: 0px;
+    background-color:white; 
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .post-tweet .aturl{
@@ -38,5 +29,22 @@
     top: -55px;
     right: -145px;
 } 
+
+.post-tweet .post-content .content{
+    position: relative;
+    text-align: left;
+    line-height: 75px;
+}
+
+.post-tweet .post-content .daycount{
+    text-align: left;
+    font-size: 0.8em;
+}
+
+.highlighted{
+    filter: brightness(85%);
+}
+
+
 
 
