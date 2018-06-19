@@ -36,26 +36,23 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <p>
-          <section class="new-tweet">
-              <h2>Compose Tweet</h2>
-              <form  method=POST action="/tweets">
-                <textarea class="chatbox" name="text" placeholder="What are you humming about?"></textarea>
-                <input class="Tweetbutton" type="submit" value="Tweet">
-                <span class="counter">140</span>
-              </form>
-            </section>
+        <section class="new-tweet">
+            <h2>Compose Tweet</h2>
+            <form  method=POST action="/tweets">
+              <textarea class="chatbox" name="text" placeholder="What are you humming about?"></textarea>
+              <input class="Tweetbutton" type="submit" value="Tweet">
+              <span class="counter">140</span>
+            </form>
+          </section>
 
-            <section class="post-tweet">
-                <img src="https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1.png" alt="avatar">
-                <h2>Bill Fields</h2>
-                <span class="aturl">@test</span>
-                <section class="post-content">
-                  <article class = "content">Little tweet here</article>
-                  <hr>
-                  <footer class = "daycount">10 days ago</footer>
-                </section>
-            </section>
-
+          <section class="post-tweet">
+              <img src="https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1.png" alt="avatar">
+              <h2>Bill Fields</h2>
+              <span class="aturl">@test</span>
+              <section class="post-content"></section>
+              <hr>
+              <footer class = "daycount">10 days ago</footer>
+          </section>
       </p>
     </main>
 
@@ -67,7 +64,6 @@
 </script>
 <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 <script type="text/javascript" src="/scripts/commentbox.js"></script>
-
 <!-- Direct Child
   main > child{
 

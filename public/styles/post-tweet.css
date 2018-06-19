@@ -2,7 +2,8 @@
     background-color:#EDEDEE;
     border-radius: 5px;
     border: 1px solid #c4bebe;
-    margin: 0 2em 0;
+    margin-left: 2em;
+    margin-right: 2em;
 }
 
 .post-tweet img{
@@ -22,6 +23,7 @@
     background-color:white; 
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+    
 }
 
 .post-tweet .aturl{
@@ -30,15 +32,25 @@
     right: -145px;
 } 
 
-.post-tweet .post-content .content{
+.post-tweet .post-content{
+    
     position: relative;
     text-align: left;
-    line-height: 75px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
-.post-tweet .post-content .daycount{
+.post-tweet hr{
+    padding: 0px;
+    margin: 0px;  
+}
+
+.post-tweet .daycount{
+    background-color: white;
     text-align: left;
     font-size: 0.8em;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .highlighted{
