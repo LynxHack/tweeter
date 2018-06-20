@@ -23,35 +23,7 @@
     <script type="text/javascript" src="/scripts/app.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
     <script type="text/javascript" src="/scripts/commentbox.js"></script>
-    
-    <script>
-    $(function() {
-      let $tweet = $('.new-tweet form');
-      $tweet.on('submit', function (event) {
-        event.preventDefault();
-        let currlength = Array.from($(".new-tweet form .chatbox").val()).length;
-        if(currlength > 140){
-          document.querySelector(".err-msg").innerHTML = "Message too Long!";   
-          document.getElementsByClassName(".tweet-error").classList.add('.show');
-        }
-        else if(currlength === 0){
-          document.querySelector(".err-msg").innerHTML = "No message present"; 
-          document.getElementsByClassName(".tweet-error").classList.add('.show');
-        }
-        else{
-          document.getElementsByClassName(".tweet-error")[0].classList.remove('.show');
-          $.ajax({url: '/tweets', data: $(this).serialize(), type: 'POST',
-              success: function(responseData, textStatus, jqXHR) {
-                  console.log("response: ", responseData);
-              },
-              error: function(jqXHR, textStatus, errorThrown) {
-                  console.log(errorThrown);
-              }
-          });
-        }
-      });
-    });
-    </script>
+    <script type="text/javascript" src="/scripts/errormsg.js"></script>
     
   </head>
 
@@ -86,7 +58,6 @@
           <hr>
           <footer class = "daycount">10 days ago</footer>
         </section> -->
-      </p>
     </main>
 
   </body>

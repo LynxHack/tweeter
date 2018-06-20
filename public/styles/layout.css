@@ -22,9 +22,9 @@ body {
 }
 
 .container {
-    position: absolute;
+    position: relative;
     background-color: white;
-    top: 84px;
+    top: 68px;
     left: 0;
     right: 0;
     bottom: 0;
