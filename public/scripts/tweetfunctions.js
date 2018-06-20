@@ -7,7 +7,7 @@ function createTweetElement(tweet) {
         <section class="post-content">${escape(tweet.content.text)}</section>
             <hr>
             <footer>
-                ${escape(tweet.created_at)}
+                ${Math.round(escape(tweet.created_at)/ 86400000000) + " days ago"}
                 <span class="tweeticons">
                     <i class="fas fa-flag"></i>
                     <i class="fas fa-retweet"></i>
@@ -38,16 +38,6 @@ function createTweetElement(tweet) {
         div.appendChild(document.createTextNode(str));
         return div.innerHTML;
       }
-
-    function dateconverter(time){
-        const seconds = time/1000000;
-        const minutes = seconds/60;
-        const hours   = time - seconds*1000000 - minutes*60;
-        console.log(hours, minutes, seconds);
-    
-    }
-
-    dateconverter(1529513989305);
 
     function loadTweets(){
         $.ajax("/tweets").done(function(articles){
