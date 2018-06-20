@@ -2,8 +2,10 @@
     background-color:#EDEDEE;
     border-radius: 5px;
     border: 1px solid #c4bebe;
+    margin-top: 1em;
     margin-left: 2em;
     margin-right: 2em;
+    filter: contrast(107%);
 }
 
 .post-tweet img{
@@ -33,7 +35,7 @@
 } 
 
 .post-tweet .post-content{
-    
+    word-wrap: break-word;
     position: relative;
     text-align: left;
     padding-top: 10px;
@@ -45,12 +47,14 @@
     margin: 0px;  
 }
 
-.post-tweet .daycount{
+.post-tweet footer{
     background-color: white;
     text-align: left;
     font-size: 0.8em;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
 }
 
 

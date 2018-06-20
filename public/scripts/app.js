@@ -48,16 +48,36 @@ $(document).ready(function() {
     ];
 
     function createTweetElement(tweet) {
-        let $tweet = $('<article>').addClass('.post-tweet .post-content');
-        $tweet.text(tweet.content.text);
-        return $tweet;
+      let $test = 
+        `<section class="post-tweet">
+        <img src="${tweet.user.avatars.regular}"  alt="avatar">
+        <h2>${tweet.user.name}</h2>
+        <span class="aturl">${tweet.user.handle}</span>
+        <section class="post-content">${tweet.content.text}</section>
+        <hr>
+        <footer class = "daycount">${tweet.created_at}</footer>
+        </section>`;
+      let $tweet = $('<article>').addClass('.post-tweet .post-content');
+      $tweet.text(tweet.content.text);
+      return $test;
     }
 
     function renderTweets(tweets) {
-        for(element in data){
-            $('.post-tweet .post-content').append(createTweetElement(data[element]));
-        }
+      for(element in tweets){
+          $('.Tweet-container').append(createTweetElement(tweets[element]));
+      }
+    }
+    
+    function loadTweets(){
+      $.ajax({url: "/tweets", type: "GET", 
+      success: function(data) {
+        console.log(data);
+        renderTweets(data);
+      },
+      error: function(jqXHR, textStatus, errorThrown) {
+          console.log(errorThrown);
+      }});
     }
 
-    renderTweets(data);
+    loadTweets();
 });

@@ -1,8 +1,21 @@
+.tweet-error{
+    background-color:#fcd380;
+    border-radius: 5px;
+    border: none;
+    margin: 1em 2em 1em;
+    display: none;
+}
+
+.show{
+    display: block;
+    border: 2px solid #a07f3e;;
+}
+
 .new-tweet{
     background-color:#EDEDEE;
     border-radius: 5px;
     border: 4px solid #c4bebe;
-    margin: 0 2em 0;
+    margin: 1em 2em 1em;
 }
 
 .new-tweet h2{
@@ -28,6 +41,7 @@
 }
 
 .counter{
+    color: black;
     position: relative;
     float: right;
     right: 10px;

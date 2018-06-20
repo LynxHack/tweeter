@@ -21,12 +21,41 @@
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    <script type="text/javascript" src="/scripts/commentbox.js"></script>
     
-     
+    <script>
+    $(function() {
+      let $tweet = $('.new-tweet form');
+      $tweet.on('submit', function (event) {
+        event.preventDefault();
+        let currlength = Array.from($(".new-tweet form .chatbox").val()).length;
+        if(currlength > 140){
+          document.querySelector(".err-msg").innerHTML = "Message too Long!";   
+          document.getElementsByClassName(".tweet-error").classList.add('.show');
+        }
+        else if(currlength === 0){
+          document.querySelector(".err-msg").innerHTML = "No message present"; 
+          document.getElementsByClassName(".tweet-error").classList.add('.show');
+        }
+        else{
+          document.getElementsByClassName(".tweet-error")[0].classList.remove('.show');
+          $.ajax({url: '/tweets', data: $(this).serialize(), type: 'POST',
+              success: function(responseData, textStatus, jqXHR) {
+                  console.log("response: ", responseData);
+              },
+              error: function(jqXHR, textStatus, errorThrown) {
+                  console.log(errorThrown);
+              }
+          });
+        }
+      });
+    });
+    </script>
+    
   </head>
 
   <body>
-
     <!-- Top nav bar (fixed) -->
     <nav id="nav-bar">
       <img class="logo" src="/images/bird.png" width="80px" height="80px">
@@ -35,35 +64,33 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <p>
+        <section class="tweet-error">
+          <p class="err-msg"></p>
+        </section>
+        
         <section class="new-tweet">
-            <h2>Compose Tweet</h2>
-            <form  method=POST action="/tweets">
-              <textarea class="chatbox" name="text" placeholder="What are you humming about?"></textarea>
-              <input class="Tweetbutton" type="submit" value="Tweet">
-              <span class="counter">140</span>
-            </form>
-          </section>
-
-          <section class="post-tweet">
-              <img src="https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1.png" alt="avatar">
-              <h2>Bill Fields</h2>
-              <span class="aturl">@test</span>
-              <section class="post-content"></section>
-              <hr>
-              <footer class = "daycount">10 days ago</footer>
-          </section>
+          <h2>Compose Tweet</h2>
+          <form  method=POST action="/tweets">
+            <textarea class="chatbox" name="text" placeholder="What are you humming about?"></textarea>
+            <input class="Tweetbutton" type="submit" value="Tweet">
+            <span class="counter">140</span>
+          </form>
+        </section>
+        <section class="Tweet-container">
+        </section>
+        <!-- <section class="post-tweet">
+          <img src="https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1.png" alt="avatar">
+          <h2>Bill Fields</h2>
+          <span class="aturl">@test</span>
+          <section class="post-content"></section>
+          <hr>
+          <footer class = "daycount">10 days ago</footer>
+        </section> -->
       </p>
     </main>
 
   </body>
 </html>
-
-<script>
-
-</script>
-<script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-<script type="text/javascript" src="/scripts/commentbox.js"></script>
 <!-- Direct Child
   main > child{
 
