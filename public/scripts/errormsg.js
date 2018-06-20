@@ -1,5 +1,4 @@
 $(function() {
-    console.log("hovering");
     let $tweet = $('.new-tweet form');
     $tweet.on('submit', function (event) {
       event.preventDefault();

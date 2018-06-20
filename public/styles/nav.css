@@ -18,17 +18,15 @@
     background: #E5FDFF;
     border-radius: 5px;
     border: 1px solid black;
+    color: #009F86;
 }
 
 #nav-bar .composetweet span{
     position: relative;
-    top: 5px;
-    color: #009F86;
 }
+
 #nav-bar .composetweet .composeicon{
-    block-size: 30px;
     float: left;
-    color: #009F86;
 }
 
 #nav-bar .header{

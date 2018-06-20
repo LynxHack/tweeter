@@ -8,6 +8,29 @@
     filter: contrast(107%);
 }
 
+.post-tweet:hover{
+    filter: contrast(100%);
+    transition: filter 0.15s ease-in-out
+}
+
+.tweeticons{
+    position: relative;
+    right: 10px;
+    float: right;
+    opacity: 0;
+    transition: opacity 0.15s linear;
+}
+
+.post-tweet:hover .tweeticons{
+    opacity: 1;
+    display: block;
+}
+
+.tweeticons i{
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
 .post-tweet img{
     float: left;
     block-size: 60px;
@@ -38,7 +61,6 @@
     padding-left: 10px;
     padding-top: 20px;
     padding-bottom: 20px;
-    
 }
 
 .post-tweet hr{
@@ -56,8 +78,6 @@
     padding-top: 3px;
     padding-bottom: 3px;
 }
-
-
 
 
 

@@ -1,5 +1,4 @@
 $(document).ready(function() {
-    console.log("hovering3");
     var x = document.getElementsByClassName("post-tweet");
     $(".post-tweet").on("mouseover", function(){
         console.log("hovering");
