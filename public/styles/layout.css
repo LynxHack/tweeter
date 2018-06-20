@@ -24,7 +24,8 @@ body {
 .container {
     position: relative;
     background-color: white;
-    top: 68px;
+    padding-top: 15px;
+    top: 84px;
     left: 0;
     right: 0;
     bottom: 0;
