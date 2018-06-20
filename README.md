@@ -4,6 +4,8 @@ Tweeter is a simple, single-page Twitter clone.
 
 This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express and MongoDB back-end skills.
 
+**Important!** The mongoDB's server path is set to virtual machine in vagrant, user may need to initialize vagrant first for mongo to be fully functional.
+
 ## User Interface
 
 As can be seen, the user interface compose of a simple tweet logging system.
