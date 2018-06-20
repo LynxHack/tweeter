@@ -9,6 +9,28 @@
     z-index: 2;
 }
 
+#nav-bar .composetweet{
+    position: relative;
+    float:right;
+    right: 30px;
+    top: 9px;
+    height: 65px;
+    background: #E5FDFF;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+#nav-bar .composetweet span{
+    position: relative;
+    top: 5px;
+    color: #009F86;
+}
+#nav-bar .composetweet .composeicon{
+    block-size: 30px;
+    float: left;
+    color: #009F86;
+}
+
 #nav-bar .header{
     position: absolute;
     color: #e8fdff ;

@@ -21,25 +21,24 @@
     position: relative;
 }
 
-.post-tweet .post-content{
-    background-color:white; 
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    
-}
-
 .post-tweet .aturl{
     position: relative;
     top: -55px;
-    right: -145px;
+    right: 10px;
+    float: right;
 } 
 
 .post-tweet .post-content{
-    word-wrap: break-word;
     position: relative;
+    background-color:white; 
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    word-wrap: break-word;
     text-align: left;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
 }
 
 .post-tweet hr{
@@ -53,6 +52,7 @@
     font-size: 0.8em;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+    padding-left: 10px;
     padding-top: 3px;
     padding-bottom: 3px;
 }

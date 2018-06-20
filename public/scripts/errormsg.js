@@ -1,4 +1,5 @@
 $(function() {
+    console.log("hovering");
     let $tweet = $('.new-tweet form');
     $tweet.on('submit', function (event) {
       event.preventDefault();
@@ -8,6 +9,7 @@ $(function() {
         document.querySelector(".err-msg").innerHTML = "Message too Long!";   
         document.querySelector(".tweet-error").style.display = "block";
         document.querySelector(".tweet-error").style.border = "2px solid #a07f3e";
+
       }
       else if(currlength === 0){
         console.log("no message!");
