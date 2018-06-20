@@ -1,5 +1,6 @@
+// Creates an html object given a single tweet object
 function createTweetElement(tweet) {
-    let $test = 
+    let $article = 
         `<section class="post-tweet">
         <img src="${escape(tweet.user.avatars.regular)}"  alt="avatar">
         <h2>${escape(tweet.user.name)}</h2>
@@ -15,39 +16,28 @@ function createTweetElement(tweet) {
                 </span>
             </footer>
         </section>`;
-    let $tweet = $('<article>').addClass('.post-tweet');
-    $tweet.text(tweet.content.text);
-        return $test;
+    return $article;
+}
+
+//Renders and applies content to html container for tweets
+function renderTweets(tweets) {
+    $('.Tweet-container').html("");
+    for(element in tweets){
+        $('.Tweet-container').prepend(createTweetElement(tweets[element]));
     }
+}
 
-    function striptags(html){
-        const tmp = document.createElement("DIV");
-        tmp.innerHTML = html;
-        return ENOTEMPTY.textContent || tmp.innerText || "";
-    }
+//strips html tags away from a given input and returns it
+function escape(str) {
+    var div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+}
 
-    function renderTweets(tweets) {
-        $('.Tweet-container').html("");
-        for(element in tweets){
-            $('.Tweet-container').prepend(createTweetElement(tweets[element]));
-        }
-    }
-
-    function escape(str) {
-        var div = document.createElement('div');
-        div.appendChild(document.createTextNode(str));
-        return div.innerHTML;
-      }
-
-    function loadTweets(){
-        $.ajax("/tweets").done(function(articles){
-            console.log(articles);
-              renderTweets(articles);
-        });
-    }
-
-
-//When function sends back a value then done's function gets called
-//$.ajax('/article.html').done(function(data)){ console.log(data);});
-//jquery call automatically knows that what you want to read is an object instead of a string
-//automatically parses json 
+//get through ajax and loads tweets in /tweets route
+function loadTweets(){
+    $.ajax("/tweets").done(function(articles){
+        console.log(articles);
+            renderTweets(articles);
+    });
+}

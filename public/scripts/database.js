@@ -1,6 +1,7 @@
+//Handles Top Level server side server / post handling
+
 "use strict";
 
-//const {MongoClient} = require("mongodb"); //ES6
 const MongoClient = require("mongodb").MongoClient;
 const MONGODB_URI = "mongodb://localhost:27017/tweeter";
 
@@ -23,14 +24,6 @@ MongoClient.connect(MONGODB_URI, (err, db) => {
       callback(null, tweets);
     });
   }
-
-  // function getTweets(callback) {
-  //   db.collection("tweets").find().toArray(callback);
-  // }
-
-  // ==> Later it can be invoked. Remember even if you pass
-  //     `getTweets` to another scope, it still has closure over
-  //     `db`, so it will still work. Yay!
 
   getTweets((err, tweets) => {
     if (err) throw err;

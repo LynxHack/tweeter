@@ -1,3 +1,4 @@
+//Handles tweet box sliding animation with button toggle
 $(document).ready(function() {
     $(".composetweet").click(function(){
         console.log("clicked");

@@ -1,3 +1,7 @@
+// Checks whether submit form box's content meets requirement of
+// 1-140 characters input. If passed, post the new tweet out to 
+// server and then regenerate the new list of tweet to show client
+
 $(function() {
     let $tweet = $('.new-tweet form');
     $tweet.on('submit', function (event) {
