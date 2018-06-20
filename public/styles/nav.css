@@ -21,6 +21,15 @@
     color: #009F86;
 }
 
+#nav-bar .composetweet:hover{
+    filter: contrast(120%);
+    transition: filter 0.1s ease-in-out
+}
+
+#nav-bar .composetweet:active{
+    filter: contrast(90%);
+}
+
 #nav-bar .composetweet span{
     position: relative;
 }
