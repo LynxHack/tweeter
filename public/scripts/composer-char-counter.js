@@ -1,3 +1,4 @@
+//Counts amount of characters enters and sets color accordingly
 $(document).ready(function() {
     document.addEventListener("dblclick", (event) => {
         console.log(event);

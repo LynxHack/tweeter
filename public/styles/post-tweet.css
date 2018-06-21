@@ -21,6 +21,10 @@
     transition: opacity 0.15s linear;
 }
 
+.fa-flag:active{
+    filter: invert(100%);
+}
+
 .post-tweet:hover .tweeticons{
     opacity: 1;
     display: block;
