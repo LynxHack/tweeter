@@ -22,7 +22,7 @@ module.exports = function makeDataHelpers(db) {
         if (err) {
           return callback(err);
         } 
-        callback(null, tweets.slice(1,tweets.length).sort(sortNewestFirst));
+        callback(null, tweets.sort(sortNewestFirst));
       });
     }
   };
